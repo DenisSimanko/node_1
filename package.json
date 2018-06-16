@@ -1,0 +1,19 @@
+{
+  "name": "node_1",
+  "version": "1.0.0",
+  "description": "nothing special///",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisSimanko/node_1.git"
+  },
+  "author": "Denis Simanko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisSimanko/node_1/issues"
+  },
+  "homepage": "https://github.com/DenisSimanko/node_1#readme"
+}
