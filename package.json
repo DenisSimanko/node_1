@@ -1,7 +1,7 @@
 {
   "name": "node_1",
   "version": "1.0.0",
-  "description": "nothing special///",
+  "description": "nothing special",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DenisSimanko/node_1/issues"
   },
-  "homepage": "https://github.com/DenisSimanko/node_1#readme"
+  "homepage": "https://github.com/DenisSimanko/node_1#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
