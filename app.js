@@ -1,13 +1,18 @@
 let express = require('express');
 let app = express();
-let birds = require('./birds');
 
 app.set('view engine', 'ejs');
+
+let birds = require('./birdsRouter');
+let omdb = require('./omdbRouter');
+let yelpCamp = require('./yelpCampRouter');
+
 app.use(express.static('public'));
 
 app.use(requestTime);
 app.use('/birds', birds);
-
+app.use('/omdb', omdb);
+app.use('/yelp', yelpCamp);
 
 app.get('/', function (req, res) {
 	let resText = req.requestTime + ' Root';
