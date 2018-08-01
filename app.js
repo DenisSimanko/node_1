@@ -1,18 +1,20 @@
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
 
 app.set('view engine', 'ejs');
 
-let birds = require('./birdsRouter');
-let omdb = require('./omdbRouter');
-let yelpCamp = require('./yelpCampRouter');
+const birds = require('./birdsRouter');
+const omdb = require('./omdbRouter');
+const yelpCamp = require('./yelpCampRouter');
+const blog = require('./blogRouter');
 
-app.use(express.static('public'));
+app.use('/static', express.static('public'));
 
 app.use(requestTime);
 app.use('/birds', birds);
 app.use('/omdb', omdb);
 app.use('/yelp', yelpCamp);
+app.use('/blog', blog);
 
 app.get('/', function (req, res) {
 	let resText = req.requestTime + ' Root';
@@ -60,3 +62,4 @@ function errorLog(err, req, res, next) {
 function errorHandler(err, req, res, next) {
 	res.render('error', { msg: err.message });
 }
+

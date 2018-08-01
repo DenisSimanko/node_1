@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+	<div class='container'>
+		<div class='jumbotron'>
+			<div class='container'>
+				<h1>Campgrounds Page</h1>
+				<p>Welcome Friends! asd asdasdbawsd;sldkj das;dlasd asdlkj</p>
+				<a class='btn btn-primary btn-sm' href="campgrounds/new">Add new campground!</a>
+			</div>
+		</div>
+
+		<div class='row text-center' style='display: flex; flex-wrap: wrap; align-items: center;'>
+			<% for (let camp of campgrounds) { %>
+				<div class='col-md-4 col-sm-6'>
+					<div class='img-thumbnail'>
+						<image style='max-width: 100%; flex: 1;' src='<%=camp.image%>'>
+							<div class='caption'>
+								<h4><%= camp.name %></h4>
+							</div>
+							<div>
+								<a class="btn btn-sm btn-primary" href="<%= 'campgrounds/' + camp._id %>">More Info</a>
+							</div>
+					</div>
+				</div>
+				<% } %>
+
+		</div>
+	</div>
+
+	<% include partials/footer %>

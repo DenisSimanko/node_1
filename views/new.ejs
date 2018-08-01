@@ -1,0 +1,23 @@
+<% include partials/header %>
+  <div class='container'>
+    <h1 class="text-center">Create new campground!</h1>
+    <div class='row'>
+      <div style='width: 30%; margin: 0 auto; margin-top: 30px;'>
+        <form action="/yelp/campgrounds" method="POST">
+          <div class='form-group'>
+            <input type="text" class='form-control' name='name' placeholder="name">
+          </div>
+          <div class='form-group'>
+            <input type="text" class='form-control' name='image' placeholder="image url">
+          </div>
+          <div class='form-group'>
+            <input type="text" class='form-control' name='description' placeholder="description">
+          </div>
+          <div class='form-group'>
+            <button class='btn btn-sm btn-block btn-outline-primary' type="submit">Submit!</button>
+          </div>
+        </form>
+        <a href="/yelp/campgrounds">Get back</a>
+      </div>
+    </div>
+    <% include partials/footer %>
